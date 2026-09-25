@@ -1,0 +1,6 @@
+{
+  "name": "Hôtel La Renaissance Tata",
+  "description": "Hôtel La Renaissance Tata – Hôtel familial, restaurant marocain traditionnel, traiteur et salle d'événements à Tata, Maroc depuis 1982. فندق لا رينيسانس طاطا.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

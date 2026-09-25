@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tata-renaissance-stay.base44.app/sitemap.xml
