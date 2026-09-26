@@ -1,6 +1,6 @@
 /**
  * Hôtel La Renaissance Tata | فندق لا رينيسانس طاطا
- * Official Web Application & Direct Booking Portal
+ * Official Hotel Web Application & Booking Portal
  */
 
 import React from "react";
@@ -11,9 +11,11 @@ import { AboutSection } from "./components/AboutSection";
 import { RoomsSection } from "./components/RoomsSection";
 import { ServicesSection } from "./components/ServicesSection";
 import { GallerySection } from "./components/GallerySection";
+import { DiscoverTataSection } from "./components/DiscoverTataSection";
 import { ReviewsSection } from "./components/ReviewsSection";
 import { FaqSection } from "./components/FaqSection";
 import { LocationSection } from "./components/LocationSection";
+import { CtaBanner } from "./components/CtaBanner";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { MobileStickyBar } from "./components/MobileStickyBar";
@@ -22,44 +24,53 @@ function MainContent() {
   const { dir } = useTranslation();
 
   return (
-    <div dir={dir} className="bg-sand min-h-screen text-ink overflow-x-hidden selection:bg-terracotta selection:text-white">
-      {/* Fixed Navigation Bar */}
+    <div
+      dir={dir}
+      className="bg-sand min-h-screen text-ink overflow-x-hidden selection:bg-terracotta selection:text-white"
+    >
+      {/* Navigation Header */}
       <Header />
 
       {/* Main Content Areas */}
       <main>
-        {/* Hero Section with Live Booking Bar */}
+        {/* 1. Hero Section with Live Booking Bar & WhatsApp CTA */}
         <Hero />
 
-        {/* About: 1982 Legacy & Amenities */}
+        {/* 2. About: Legacy since 1982 & Signature Hospitality */}
         <AboutSection />
 
-        {/* Rooms & Rates */}
+        {/* 3. Rooms & Confirmed Rates */}
         <RoomsSection />
 
-        {/* Services: Accommodation, Moroccan Restaurant, Events & Catering */}
+        {/* 4. Services & Confirmed Amenities */}
         <ServicesSection />
 
-        {/* Photo Gallery with Lightbox */}
+        {/* 5. Categorized Photo Gallery with Lightbox */}
         <GallerySection />
 
-        {/* Verified Reviews (Booking 7.4, Agoda 7.8, Google 3.9) */}
+        {/* 6. Discover Tata & the Region (SEO & Travel Guide) */}
+        <DiscoverTataSection />
+
+        {/* 7. Verified Guest Reviews & Ratings Breakdown */}
         <ReviewsSection />
 
-        {/* Rich SEO FAQ Section */}
+        {/* 8. Frequently Asked Questions (FAQPage Schema) */}
         <FaqSection />
 
-        {/* Location & Interactive Map */}
+        {/* 9. Find Us in Tata (Location, Map, Directions) */}
         <LocationSection />
 
-        {/* Contact & Direct Concierge Reservation Form */}
+        {/* 10. High-converting Booking CTA Banner */}
+        <CtaBanner />
+
+        {/* 11. Contact & Direct Concierge Reservation Form */}
         <ContactSection />
       </main>
 
-      {/* Footer */}
+      {/* Official Footer */}
       <Footer />
 
-      {/* Floating Mobile Bottom Navigation */}
+      {/* Floating Bottom Bar on Mobile Devices */}
       <MobileStickyBar />
     </div>
   );

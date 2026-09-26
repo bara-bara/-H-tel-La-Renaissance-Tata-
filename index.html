@@ -3,6 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        function ensureFetchSetter(target) {
+          if (!target) return;
+          try {
+            var desc = Object.getOwnPropertyDescriptor(target, 'fetch');
+            if (desc && !desc.set && desc.configurable) {
+              var currentFetch = target.fetch;
+              Object.defineProperty(target, 'fetch', {
+                get: function() { return currentFetch; },
+                set: function(v) { currentFetch = v; },
+                configurable: true,
+                enumerable: desc.enumerable !== undefined ? desc.enumerable : true
+              });
+            } else if (!desc) {
+              var cur = target.fetch;
+              Object.defineProperty(target, 'fetch', {
+                get: function() { return cur; },
+                set: function(v) { cur = v; },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          } catch (e) {}
+        }
+        ensureFetchSetter(window);
+        if (typeof Window !== 'undefined' && Window.prototype) {
+          ensureFetchSetter(Window.prototype);
+        }
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 48'%3E%3Cpath d='M2 46V20a18 18 0 0 1 36 0v26z' fill='%23B25B3E'/%3E%3Ctext x='20' y='38' font-family='Georgia' font-size='20' fill='%23F5EBE0' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
     <link rel="manifest" href="/manifest.json" />
 
@@ -156,7 +187,7 @@
               "name": "Comment réserver au meilleur prix ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Vous pouvez réserver directement via WhatsApp au +212 6 30 00 33 33 pour bénéficier du meilleur tarif garanti, ou via nos partenaires Booking.com et Agoda."
+                "text": "Vous pouvez réserver directement en ligne sur Booking.com ou via WhatsApp au +212 6 30 00 33 33 pour bénéficier du meilleur tarif direct garanti."
               }
             }
           ]
@@ -185,6 +216,12 @@
             {
               "@type": "ListItem",
               "position": 4,
+              "name": "Découvrir Tata",
+              "item": "https://tata-renaissance-stay.base44.app/#discover"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
               "name": "Contact",
               "item": "https://tata-renaissance-stay.base44.app/#contact"
             }

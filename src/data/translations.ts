@@ -14,14 +14,16 @@ export const translations = {
       "reviews": "التقييمات",
       "location": "الموقع",
       "contact": "اتصل بنا",
-      "book": "احجز الآن"
+      "book": "احجز الآن",
+      "discover": "طاطا"
     },
     "hero": {
       "eyebrow": "طاطا · المغرب · منذ 1982",
       "title": "إرث من الضيافة في قلب طاطا",
       "subtitle": "إقامة هادئة، مطبخ مغربي أصيل، ومناسبات لا تُنسى — على بُعد خطوات من واحات الجنوب وجبال الأطلس الصغير.",
-      "cta": "احجز إقامتك",
-      "secondary": "اكتشف الغرف"
+      "cta": "احجز الآن",
+      "secondary": "اكتشف الغرف",
+      "whatsapp": "تواصل عبر واتساب"
     },
     "widget": {
       "checkin": "تاريخ الوصول",
@@ -116,7 +118,8 @@ export const translations = {
           "beds": "سرير مزدوج + سرير فردي",
           "desc": "أكبر غرفنا، تجمع بين سرير مزدوج وسرير فردي — خيار مثالي لعائلة صغيرة تبحث عن مساحة إضافية."
         }
-      ]
+      ],
+      "checkAvailability": "تحقق من التوفر والأسعار"
     },
     "services": {
       "eyebrow": "فن الضيافة",
@@ -145,7 +148,14 @@ export const translations = {
     "gallery": {
       "eyebrow": "معرض الصور",
       "title": "لمحات من الفندق وطاطا",
-      "subtitle": "صور من الغرف، المطعم، الفضاءات المشتركة وطبيعة طاطا الساحرة."
+      "subtitle": "صور من الغرف، المطعم، الفضاءات المشتركة وطبيعة طاطا الساحرة.",
+      "filters": {
+        "all": "جميع الصور",
+        "rooms": "الغرف",
+        "hotel": "الفندق والفناء",
+        "restaurant": "المطعم",
+        "common": "البهو والمرافق"
+      }
     },
     "reviews": {
       "eyebrow": "آراء الضيوف",
@@ -275,6 +285,37 @@ export const translations = {
           "a": "نعم، يُسمح بالحيوانات الأليفة في الفندق دون أي رسوم إضافية."
         }
       ]
+    },
+    "discover": {
+      "eyebrow": "اكتشف طاطا والمنطقة",
+      "title": "واحة الجنوب المغربي الساحرة وعاصمة الأطلس الصغير",
+      "subtitle": "تتميز طاطا بطبيعتها الصحراوية الخلابة وواحاتها النخيلية الخضراء وتاريخها العريق الممتد عبر القرون.",
+      "items": [
+        {
+          "title": "واحة ونخيل طاطا",
+          "desc": "واحة ممتدة تضم آلاف أشجار النخيل الباسقة، ونظام ري تقليدي بديع (الخطارات والسواقي) يمنح الزائر شعوراً استثنائياً بالسكينة والانتعاش."
+        },
+        {
+          "title": "القصبات والقرى الطينية التاريخية",
+          "desc": "قصبات أثرية شامخة ومبانٍ طينية عريقة كقصبة أكادير لهنا وقرى ديد وتزونين، تجسد تراث القوافل التجارية التاريخية عبر الصحراء."
+        },
+        {
+          "title": "النقوش الصخرية الأثرية",
+          "desc": "مواقع أثرية مفتوحة في محيط طاطا تحتوي على نقوش ورسومات صخرية تعود لآلاف السنين قبل الميلاد، وتوثق حياة الإنسان وحيوانات ما قبل التاريخ."
+        },
+        {
+          "title": "جبال الأطلس الصغير ومسارات 4x4",
+          "desc": "تضاريس جبلية وردية مذهلة، ومسارات خلابة تربط طاطا بتافراوت وإيغرم وفم زكيد ومحاميد الغزلان، وجهة مفضلة لعشاق المغامرة والهدوء."
+        }
+      ],
+      "stayNote": "يقع فندق لا رينيسانس في قلب طاطا على بُعد 900 متر فقط من مركز المدينة، ليكون محطتكم المريحة والمثالية لاستكشاف روعة هذه المنطقة الأصيلة."
+    },
+    "ctaBanner": {
+      "eyebrow": "إقامة مريحة في قلب طاطا",
+      "title": "هل تخطط لزيارة طاطا قريباً؟",
+      "subtitle": "احجز غرفتك مباشرة عبر Booking.com أو تواصل معنا عبر واتساب للاستفادة من أفضل الأسعار والخدمات الشخصية.",
+      "bookBtn": "احجز غرفتك الآن",
+      "whatsappBtn": "تواصل عبر واتساب"
     }
   },
   "fr": {
@@ -290,14 +331,16 @@ export const translations = {
       "reviews": "Avis",
       "location": "Accès",
       "contact": "Contact",
-      "book": "Réserver"
+      "book": "RÉSERVER",
+      "discover": "Découvrir Tata"
     },
     "hero": {
       "eyebrow": "Tata · Maroc · Depuis 1982",
       "title": "Un héritage d'hospitalité au cœur de Tata",
       "subtitle": "Séjours paisibles, cuisine marocaine authentique et événements inoubliables — aux portes des oasis du Sud et de l'Anti-Atlas.",
-      "cta": "Réserver mon séjour",
-      "secondary": "Découvrir les chambres"
+      "cta": "Book Now — Réserver",
+      "secondary": "Découvrir les chambres",
+      "whatsapp": "Contact on WhatsApp"
     },
     "widget": {
       "checkin": "Arrivée",
@@ -392,7 +435,8 @@ export const translations = {
           "beds": "1 lit double + 1 lit simple",
           "desc": "Notre plus grande chambre : un lit double et un lit simple — le choix parfait pour une petite famille en quête d'espace."
         }
-      ]
+      ],
+      "checkAvailability": "Vérifier la disponibilité & tarifs"
     },
     "services": {
       "eyebrow": "L'art de recevoir",
@@ -421,7 +465,14 @@ export const translations = {
     "gallery": {
       "eyebrow": "Galerie",
       "title": "Instants de l'hôtel et de Tata",
-      "subtitle": "Chambres, restaurant, espaces communs et paysages envoûtants de Tata."
+      "subtitle": "Chambres, restaurant, espaces communs et paysages envoûtants de Tata.",
+      "filters": {
+        "all": "Toutes les photos",
+        "rooms": "Chambres",
+        "hotel": "Hôtel & Patio",
+        "restaurant": "Restaurant",
+        "common": "Espaces communs"
+      }
     },
     "reviews": {
       "eyebrow": "Avis clients",
@@ -551,6 +602,37 @@ export const translations = {
           "a": "Oui, les animaux de compagnie sont les bienvenus au sein de notre établissement, sans supplément."
         }
       ]
+    },
+    "discover": {
+      "eyebrow": "Découvrir Tata & sa région",
+      "title": "L'oasis secrète du Sud et des montagnes de l'Anti-Atlas",
+      "subtitle": "Aux confins du Sahara et des crêtes roses de l'Anti-Atlas, Tata dévoile une nature préservée et un patrimoine millénaire.",
+      "items": [
+        {
+          "title": "La Palmeraie de Tata & les Khettaras",
+          "desc": "Une oasis luxuriante de palmiers dattiers irriguée par d'ingénieux canaux traditionnels, offrant fraîcheur et sérénité après la route désertique."
+        },
+        {
+          "title": "Ksour & Kasbahs de terre séculaires",
+          "desc": "Des forteresses d'argile impressionnantes comme Agadir Lehana, témoins du grand passé caravanier transsaharien reliant l'Afrique subsaharienne au Nord."
+        },
+        {
+          "title": "Gravures rupestres préhistoriques",
+          "desc": "Des sites archéologiques uniques à ciel ouvert abritant des pétroglyphes millénaires gravés par les premiers peuples du Sud marocain."
+        },
+        {
+          "title": "L'Anti-Atlas & circuits 4x4",
+          "desc": "Des panoramas lunaires et canyons sculptés menant vers Tafraout, Igherm ou Foum Zguid, paradis des voyageurs indépendants et des motards."
+        }
+      ],
+      "stayNote": "Idéalement situé au 9 Avenue des F.A.R à 900 m du centre-ville, l'Hôtel La Renaissance est votre camp de base chaleureux et sécurisé pour explorer la province de Tata."
+    },
+    "ctaBanner": {
+      "eyebrow": "Hospitalité depuis 1982",
+      "title": "Préparez votre séjour à Tata dès aujourd'hui",
+      "subtitle": "Bénéficiez de la réservation instantanée sur Booking.com ou échangez directement avec notre équipe sur WhatsApp.",
+      "bookBtn": "Réserver votre séjour",
+      "whatsappBtn": "Écrire sur WhatsApp"
     }
   },
   "en": {
@@ -566,14 +648,16 @@ export const translations = {
       "reviews": "Reviews",
       "location": "Location",
       "contact": "Contact",
-      "book": "Book now"
+      "book": "BOOK NOW",
+      "discover": "Discover Tata"
     },
     "hero": {
       "eyebrow": "Tata · Morocco · Since 1982",
       "title": "A Legacy of Hospitality in the Heart of Tata",
       "subtitle": "Peaceful stays, authentic Moroccan cuisine and unforgettable events — at the gateway to the southern oases and the Anti-Atlas.",
-      "cta": "Book your stay",
-      "secondary": "Explore rooms"
+      "cta": "Book Now",
+      "secondary": "Explore rooms",
+      "whatsapp": "Contact on WhatsApp"
     },
     "widget": {
       "checkin": "Check-in",
@@ -668,7 +752,8 @@ export const translations = {
           "beds": "1 double + 1 single bed",
           "desc": "Our largest room: a double bed plus a single — the perfect choice for a small family wanting extra space."
         }
-      ]
+      ],
+      "checkAvailability": "Check availability & price"
     },
     "services": {
       "eyebrow": "The art of hosting",
@@ -697,7 +782,14 @@ export const translations = {
     "gallery": {
       "eyebrow": "Gallery",
       "title": "Moments from the hotel and Tata",
-      "subtitle": "Rooms, restaurant, shared spaces and the captivating landscapes of Tata."
+      "subtitle": "Rooms, restaurant, shared spaces and the captivating landscapes of Tata.",
+      "filters": {
+        "all": "All Photos",
+        "rooms": "Rooms",
+        "hotel": "Hotel & Patio",
+        "restaurant": "Restaurant",
+        "common": "Common Areas"
+      }
     },
     "reviews": {
       "eyebrow": "Guest reviews",
@@ -827,6 +919,37 @@ export const translations = {
           "a": "Yes, pets are welcome at Hôtel La Renaissance free of charge."
         }
       ]
+    },
+    "discover": {
+      "eyebrow": "Discover Tata & the Region",
+      "title": "The Enchanting Oasis of Southern Morocco & Anti-Atlas",
+      "subtitle": "At the crossroads of pink granite mountain peaks and the northern Sahara, Tata offers breathtaking vistas and centuries of authentic heritage.",
+      "items": [
+        {
+          "title": "Tata Oasis & Ancient Irrigation",
+          "desc": "A sprawling emerald oasis with thousands of date palms, nourished by ancestral subterranean water channels (foggara and khettara)."
+        },
+        {
+          "title": "Historic Earthen Kasbahs",
+          "desc": "Centuries-old fortified villages such as Agadir Lehana, built from rammed earth and standing as sentinels of ancient trans-Saharan trade routes."
+        },
+        {
+          "title": "Prehistoric Rock Petroglyphs",
+          "desc": "Remarkable open-air archaeological sites featuring petroglyphs carved into stone millennia ago depicting wild fauna and early hunters."
+        },
+        {
+          "title": "Anti-Atlas Peaks & 4x4 Trails",
+          "desc": "Dramatic gorges, pink granite mountains, and famous expedition tracks heading to Tafraout, Igherm, and the desert of Foum Zguid."
+        }
+      ],
+      "stayNote": "Located conveniently at 9 Avenue des F.A.R, just 900 meters from Tata town center, Hôtel La Renaissance is your restful oasis retreat."
+    },
+    "ctaBanner": {
+      "eyebrow": "A Warm Moroccan Welcome",
+      "title": "Ready to Experience Tata, Morocco?",
+      "subtitle": "Book your room directly on Booking.com for instant confirmation, or message our team directly on WhatsApp for special requests.",
+      "bookBtn": "Book Your Room",
+      "whatsappBtn": "Chat on WhatsApp"
     }
   }
 } as const;

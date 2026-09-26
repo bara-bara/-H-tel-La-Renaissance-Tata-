@@ -1,25 +1,43 @@
 /**
- * Hôtel La Renaissance Tata – Core Data & Configurations
+ * Hôtel La Renaissance Tata – Core Hotel Data & Official Configuration
+ * 
+ * Note: All contact details, booking URLs, and media assets are preserved
+ * from the confirmed project records.
  */
+
+// PRIMARY DIRECT BOOKING URL
+// Booking.com was selected as the premier booking engine for superior trust,
+// multilingual support, instant confirmation, and dominant Moroccan market presence.
+export const BOOKING_URL = "https://www.booking.com/hotel/ma/la-renaissance-tata.html";
+
+// DIRECT HOTEL CONTACTS
+export const WHATSAPP_URL = "https://wa.me/212630003333";
+export const PHONE_NUMBER = "+212528802494";
+export const PHONE_DISPLAY = "05 28 80 24 94";
+export const MOBILE_NUMBER = "+212630003333";
+export const MOBILE_DISPLAY = "06 30 00 33 33";
+export const EMAIL_ADDRESS = "larenaissance1982@gmail.com";
 
 export const hotelInfo = {
   name: "Hôtel La Renaissance Tata",
   arabicName: "فندق لا رينيسانس طاطا",
-  phone: "+212528802494",
-  phoneLabel: "05 28 80 24 94",
-  mobile: "+212630003333",
-  mobileLabel: "06 30 00 33 33",
-  whatsapp: "https://wa.me/212630003333",
-  email: "larenaissance1982@gmail.com",
+  phone: PHONE_NUMBER,
+  phoneLabel: PHONE_DISPLAY,
+  mobile: MOBILE_NUMBER,
+  mobileLabel: MOBILE_DISPLAY,
+  whatsapp: WHATSAPP_URL,
+  email: EMAIL_ADDRESS,
   address: "9 Avenue des F.A.R, Tata 84000, Maroc",
+  addressArabic: "9 شارع القوات المسلحة الملكية، طاطا 84000، المغرب",
   city: "Tata",
   country: "Maroc",
   postalCode: "84000",
+  receptionHours: "24/7 (24h/24, 7j/7)",
   coordinates: {
     lat: 29.7497,
     lng: -7.9744,
   },
-  bookingUrl: "https://www.booking.com/hotel/ma/la-renaissance-tata.html",
+  bookingUrl: BOOKING_URL,
   agodaUrl: "https://www.agoda.com/hotel-la-renaissance/hotel/tata-ma.html",
   googleUrl: "https://www.google.com/maps/search/?api=1&query=Hotel+La+Renaissance+Tata+Avenue+des+FAR",
   mapEmbed: "https://maps.google.com/maps?q=Hotel%20La%20Renaissance%20Tata%2C%20Avenue%20des%20FAR%2C%20Tata%2C%20Morocco&z=15&output=embed",
@@ -36,24 +54,12 @@ export const getBookingUrl = ({
   checkout,
   adults,
 }: {
-  checkin: string;
-  checkout: string;
-  adults: number;
+  checkin?: string;
+  checkout?: string;
+  adults?: number;
 }): string => {
-  return `${hotelInfo.bookingUrl}?checkin=${checkin}&checkout=${checkout}&group_adults=${adults}&no_rooms=1&group_children=0`;
-};
-
-export const getAgodaUrl = ({
-  checkin,
-  checkout,
-  adults,
-}: {
-  checkin: string;
-  checkout: string;
-  adults: number;
-}): string => {
-  const los = calcNights(checkin, checkout);
-  return `${hotelInfo.agodaUrl}?checkIn=${checkin}&los=${los}&adults=${adults}&rooms=1&children=0&currencyCode=MAD`;
+  if (!checkin || !checkout) return BOOKING_URL;
+  return `${BOOKING_URL}?checkin=${checkin}&checkout=${checkout}&group_adults=${adults || 2}&no_rooms=1&group_children=0`;
 };
 
 export const hotelImages = {
@@ -119,24 +125,132 @@ export const roomsData: RoomItem[] = [
   },
 ];
 
-export const galleryImages = [
-  hotelImages.realEntrance,
-  hotelImages.realCourtyard,
-  hotelImages.gPhoto1,
-  hotelImages.realLobby,
-  hotelImages.realRoom,
-  hotelImages.realRestaurant,
-  hotelImages.realRoom2,
-  hotelImages.realDining,
-  hotelImages.realHall,
-  hotelImages.realBath,
-  hotelImages.realSpace,
-  hotelImages.realRoom3,
-  hotelImages.gPhoto2,
-  hotelImages.realAgoda2,
-  hotelImages.realAgoda3,
-  hotelImages.gPhoto3,
+export type GalleryCategory = "all" | "rooms" | "hotel" | "restaurant" | "common";
+
+export interface CategorizedImage {
+  src: string;
+  category: "rooms" | "hotel" | "restaurant" | "common";
+  titleFr: string;
+  titleAr: string;
+  titleEn: string;
+}
+
+export const categorizedGalleryImages: CategorizedImage[] = [
+  {
+    src: hotelImages.realCourtyard,
+    category: "hotel",
+    titleFr: "Patio verdoyant & architecture",
+    titleAr: "الفناء الداخلي والنخيل",
+    titleEn: "Green courtyard & architecture",
+  },
+  {
+    src: hotelImages.realEntrance,
+    category: "hotel",
+    titleFr: "Entrée principale de l'hôtel",
+    titleAr: "المدخل الرئيسي للفندق",
+    titleEn: "Main hotel entrance",
+  },
+  {
+    src: hotelImages.realRoom,
+    category: "rooms",
+    titleFr: "Chambre Double Confort",
+    titleAr: "غرفة مزدوجة مريحة",
+    titleEn: "Comfort Double Room",
+  },
+  {
+    src: hotelImages.realRestaurant,
+    category: "restaurant",
+    titleFr: "Salle de restaurant marocain",
+    titleAr: "صالة المطعم المغربي",
+    titleEn: "Moroccan Restaurant dining area",
+  },
+  {
+    src: hotelImages.realRoom2,
+    category: "rooms",
+    titleFr: "Chambre Double Twin",
+    titleAr: "غرفة بسريرين منفصلين",
+    titleEn: "Twin Room setup",
+  },
+  {
+    src: hotelImages.realLobby,
+    category: "common",
+    titleFr: "Espace accueil & réception 24/7",
+    titleAr: "مكتب الاستقبال 24/7 والبهو",
+    titleEn: "24/7 Front desk & lobby",
+  },
+  {
+    src: hotelImages.realHall,
+    category: "common",
+    titleFr: "Grande salle d'événements",
+    titleAr: "قاعة المناسبات والمؤتمرات",
+    titleEn: "Grand celebration & event hall",
+  },
+  {
+    src: hotelImages.realDining,
+    category: "restaurant",
+    titleFr: "Buffet & gastronomie marocaine",
+    titleAr: "بوفيه المأكولات المغربية الأصيلة",
+    titleEn: "Buffet & Moroccan gastronomy",
+  },
+  {
+    src: hotelImages.realBath,
+    category: "rooms",
+    titleFr: "Salle de bain privée",
+    titleAr: "حمام خاص مجهز",
+    titleEn: "Ensuite private bathroom",
+  },
+  {
+    src: hotelImages.realSpace,
+    category: "common",
+    titleFr: "Détente & patio ombragé",
+    titleAr: "فضاء الاسترخاء التراثي",
+    titleEn: "Relaxation lounge & shaded patio",
+  },
+  {
+    src: hotelImages.realRoom3,
+    category: "rooms",
+    titleFr: "Chambre Triple spacieuse",
+    titleAr: "غرفة ثلاثية فسيحة",
+    titleEn: "Spacious Triple Room",
+  },
+  {
+    src: hotelImages.gPhoto1,
+    category: "hotel",
+    titleFr: "Façade & terrasse ensoleillée",
+    titleAr: "واجهة الفندق والتراس المشمس",
+    titleEn: "Sunny exterior terrace & facade",
+  },
+  {
+    src: hotelImages.realAgoda2,
+    category: "rooms",
+    titleFr: "Chambre Familiale Confort",
+    titleAr: "غرفة عائلية مريحة",
+    titleEn: "Family comfort room",
+  },
+  {
+    src: hotelImages.realAgoda3,
+    category: "rooms",
+    titleFr: "Literie soignée & calme",
+    titleAr: "أسرّة مريحة وأجواء هادئة",
+    titleEn: "Cozy bedding & peaceful ambiance",
+  },
+  {
+    src: hotelImages.gPhoto2,
+    category: "hotel",
+    titleFr: "Vue sur les montagnes de l'Anti-Atlas",
+    titleAr: "إطلالة على جبال الأطلس الصغير",
+    titleEn: "View towards the Anti-Atlas mountains",
+  },
+  {
+    src: hotelImages.gPhoto3,
+    category: "hotel",
+    titleFr: "Détails architecturaux de l'oasis",
+    titleAr: "تفاصيل معمارية من واحة طاطا",
+    titleEn: "Oasis architectural details",
+  },
 ];
+
+export const galleryImages = categorizedGalleryImages.map((item) => item.src);
 
 export const heroSlides = [
   hotelImages.realCourtyard,
